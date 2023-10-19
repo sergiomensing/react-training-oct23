@@ -1,0 +1,23 @@
+.card {
+  border-radius: 6px;
+  border: 1px solid #d1d1d1;
+  padding: 16px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.actions {
+  margin-top: 16px;
+}
+
+.button {
+  text-transform: uppercase;
+  color: blue;
+}
+
+.button:hover {
+  color: hotpink;
+}

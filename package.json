@@ -1,0 +1,14 @@
+{
+  "name": "arcady-react-workshop",
+  "version": "1.0.0",
+  "description": "## Day 1",
+  "main": "-",
+  "scripts": {
+    "install-deps": "node install.mjs"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "5.3.0",
+    "shelljs": "0.8.5"
+  }
+}
