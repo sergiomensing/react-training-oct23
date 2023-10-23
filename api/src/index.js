@@ -161,6 +161,20 @@ app.put('/recipes/:recipeId', (req, res, next) => {
   });
 });
 
+app.delete('/recipes/:recipeId', (req, res, next) => {
+  const sql = `delete from recipes where id=${req.params.recipeId}`;
+  var params = [];
+  db.run(sql, params, function (err) {
+    if (err) {
+      res.status(400).json({ error: err.message });
+      return;
+    }
+
+    res.json({ message: 'Recipe successfully deleted' });
+    return;
+  });
+});
+
 // Default response for any other request
 app.get('*', function (req, res) {
   res.sendStatus(404);

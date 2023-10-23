@@ -13,19 +13,31 @@ const recipe = {
 }
 
 export const Recipes = () => {
-  const deleteRecipe = (id: number) => () => {}
+  const deleteRecipe = (id: number) => {}
 
   return (
     <>
       <Box display="flex" flexWrap="wrap" gap={2}>
-        <InlineStyleRecipeCard recipe={recipe} deleteRecipe={deleteRecipe} />
+        <InlineStyleRecipeCard
+          recipe={recipe}
+          deleteRecipe={() => deleteRecipe(recipe.id)}
+        />
         <StyledComponentsRecipeCard
           recipe={recipe}
-          deleteRecipe={deleteRecipe}
+          deleteRecipe={() => deleteRecipe(recipe.id)}
         />
-        <TailwindRecipeCard recipe={recipe} deleteRecipe={deleteRecipe} />
-        <CSSRecipeCard recipe={recipe} deleteRecipe={deleteRecipe} />
-        <CSSModulesRecipeCard recipe={recipe} deleteRecipe={deleteRecipe} />
+        <TailwindRecipeCard
+          recipe={recipe}
+          deleteRecipe={() => deleteRecipe(recipe.id)}
+        />
+        <CSSRecipeCard
+          recipe={recipe}
+          deleteRecipe={() => deleteRecipe(recipe.id)}
+        />
+        <CSSModulesRecipeCard
+          recipe={recipe}
+          deleteRecipe={() => deleteRecipe(recipe.id)}
+        />
       </Box>
     </>
   )

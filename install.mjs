@@ -12,7 +12,7 @@ const __dirname = dirname(__filename)
 const ROOT = path.join(__dirname)
 const EXERCISES_ROOT = path.join(__dirname, 'exercises')
 const API_ROOT = path.join(__dirname, 'api')
-// const FINAL_ROOT = path.join(__dirname, 'final')
+const FINAL_ROOT = path.join(__dirname, 'final')
 
 function installer(target, dir) {
   if (dir[0] === '.') return
@@ -27,8 +27,8 @@ shell.exec('npm i --location=global yarn')
 shell.cd(ROOT)
 installer(API_ROOT, API_ROOT)
 
-// shell.cd(ROOT)
-// installer(FINAL_ROOT, FINAL_ROOT)
+shell.cd(ROOT)
+installer(FINAL_ROOT, FINAL_ROOT)
 
 shell.cd(ROOT)
 const exercises = fs.readdirSync(EXERCISES_ROOT)

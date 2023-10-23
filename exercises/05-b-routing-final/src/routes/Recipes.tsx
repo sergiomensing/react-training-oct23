@@ -16,15 +16,15 @@ export const Recipes = () => {
     navigate('/recipe/new')
   }
 
-  const onDeleteRecipe = (id: number) => () => {
+  const onDeleteRecipe = (id: number) => {
     // TODO: Implement this through the api
   }
 
-  const onEditRecipe = (id: number) => () => {
+  const onEditRecipe = (id: number) => {
     navigate(`/recipe/${id}/edit`)
   }
 
-  const onViewRecipe = (id: number) => () => {
+  const onViewRecipe = (id: number) => {
     navigate(`/recipe/${id}`)
   }
 
@@ -42,9 +42,9 @@ export const Recipes = () => {
           <RecipeCard
             key={x.id}
             recipe={x}
-            deleteRecipe={onDeleteRecipe}
-            editRecipe={onEditRecipe}
-            viewRecipe={onViewRecipe}
+            deleteRecipe={() => onDeleteRecipe(x.id)}
+            editRecipe={() => onEditRecipe(x.id)}
+            viewRecipe={() => onViewRecipe(x.id)}
           />
         ))}
       </Box>

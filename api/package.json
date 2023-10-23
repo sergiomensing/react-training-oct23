@@ -8,7 +8,6 @@
     "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Mathijs Rave",
   "license": "ISC",
   "dependencies": {
     "body-parser": "1.19.0",

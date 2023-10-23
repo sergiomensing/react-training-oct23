@@ -2,9 +2,9 @@ import { Card, CardContent, CardActions, Button } from '@mui/material'
 import { Recipe } from '@/types/Recipe'
 
 type Props = {
-  editRecipe: (id: number) => () => void
-  viewRecipe: (id: number) => () => void
-  deleteRecipe: (id: number) => () => void
+  editRecipe: () => void
+  viewRecipe: () => void
+  deleteRecipe: () => void
   recipe: Recipe
 }
 
@@ -20,9 +20,9 @@ export const RecipeCard = ({
       <p>{recipe.description}</p>
     </CardContent>
     <CardActions>
-      <Button onClick={deleteRecipe(recipe.id)}>Delete</Button>
-      <Button onClick={editRecipe(recipe.id)}>Edit</Button>
-      <Button onClick={viewRecipe(recipe.id)}>View</Button>
+      <Button onClick={deleteRecipe}>Delete</Button>
+      <Button onClick={editRecipe}>Edit</Button>
+      <Button onClick={viewRecipe}>View</Button>
     </CardActions>
   </Card>
 )

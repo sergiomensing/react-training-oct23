@@ -24,7 +24,7 @@ export const Recipes = () => {
     ])
   }
 
-  const deleteRecipe = (id: number) => () => {
+  const deleteRecipe = (id: number) => {
     setRecipes((prevState) => prevState.filter((recipe) => recipe.id !== id))
   }
 
@@ -40,7 +40,11 @@ export const Recipes = () => {
       </Fab>
       <Box display="flex" flexWrap="wrap" gap={2}>
         {recipes.map((x) => (
-          <RecipeCard key={x.id} recipe={x} deleteRecipe={deleteRecipe} />
+          <RecipeCard
+            key={x.id}
+            recipe={x}
+            deleteRecipe={() => deleteRecipe(x.id)}
+          />
         ))}
       </Box>
     </>

@@ -9,7 +9,7 @@ type Props = {
 
 export const RecipesOverview = ({ recipes }: Props) => {
   const addRecipe = () => {}
-  const deleteRecipe = (id: number) => () => {}
+  const deleteRecipe = (id: number) => {}
 
   return (
     <>
@@ -22,7 +22,11 @@ export const RecipesOverview = ({ recipes }: Props) => {
       </Fab>
       <Box display="flex" flexWrap="wrap">
         {recipes.map((x) => (
-          <RecipeCard key={x.id} recipe={x} deleteRecipe={deleteRecipe} />
+          <RecipeCard
+            key={x.id}
+            recipe={x}
+            deleteRecipe={() => deleteRecipe(x.id)}
+          />
         ))}
       </Box>
     </>

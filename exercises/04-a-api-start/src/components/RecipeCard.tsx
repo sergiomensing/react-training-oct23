@@ -2,7 +2,7 @@ import { Card, CardContent, CardActions, Button } from '@mui/material'
 import { Recipe } from '@/types/Recipe'
 
 type Props = {
-  deleteRecipe: (id: number) => () => void
+  deleteRecipe: () => void
   recipe: Recipe
 }
 
@@ -13,7 +13,7 @@ export const RecipeCard = ({ recipe, deleteRecipe }: Props) => (
       <p>{recipe.description}</p>
     </CardContent>
     <CardActions>
-      <Button onClick={deleteRecipe(recipe.id)}>Delete</Button>
+      <Button onClick={deleteRecipe}>Delete</Button>
     </CardActions>
   </Card>
 )

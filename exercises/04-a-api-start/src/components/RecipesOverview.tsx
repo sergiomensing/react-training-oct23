@@ -12,7 +12,7 @@ export const RecipesOverview = ({ recipes }: Props) => {
     // TODO: Implement this through the api
   }
 
-  const deleteRecipe = (id: number) => () => {
+  const deleteRecipe = (id: number) => {
     // TODO: Implement this through the api
   }
 
@@ -27,7 +27,11 @@ export const RecipesOverview = ({ recipes }: Props) => {
       </Fab>
       <Box display="flex" flexWrap="wrap">
         {recipes.map((x) => (
-          <RecipeCard key={x.id} recipe={x} deleteRecipe={deleteRecipe} />
+          <RecipeCard
+            key={x.id}
+            recipe={x}
+            deleteRecipe={() => deleteRecipe(x.id)}
+          />
         ))}
       </Box>
     </>

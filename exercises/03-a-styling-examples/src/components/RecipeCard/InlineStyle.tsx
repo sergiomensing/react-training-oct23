@@ -1,7 +1,7 @@
 import { Recipe } from '@/types/Recipe'
 
 type Props = {
-  deleteRecipe: (id: number) => () => void
+  deleteRecipe: () => void
   recipe: Recipe
 }
 
@@ -14,7 +14,7 @@ export const RecipeCard = ({ recipe, deleteRecipe }: Props) => (
     <div style={{ marginTop: 16 }}>
       <button
         style={{ textTransform: 'uppercase', color: 'blue' }}
-        onClick={deleteRecipe(recipe.id)}
+        onClick={deleteRecipe}
       >
         Delete
       </button>
